@@ -1,0 +1,58 @@
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__content">
+    <h1 id="hero-title">
+      {{ 'home.titleFirstLine' | transloco }}
+      <span>{{ 'home.titleSecondLine' | transloco }}</span>
+    </h1>
+    <p class="hero__role">{{ 'home.role' | transloco }}</p>
+    <p class="hero__description">{{ 'home.description' | transloco }}</p>
+
+    <div class="hero__actions">
+      <a class="button button--primary" [href]="resumeUrl" download>
+        <span class="material-symbols-outlined" aria-hidden="true">download</span>
+        {{ 'home.downloadResume' | transloco }}
+      </a>
+
+      @if (githubUrl) {
+        <a
+          class="button button--secondary"
+          [href]="githubUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">code</span>
+          {{ 'home.github' | transloco }}
+        </a>
+      } @else {
+        <span class="button button--secondary button--disabled">
+          <span class="material-symbols-outlined" aria-hidden="true">code</span>
+          {{ 'home.github' | transloco }}
+        </span>
+      }
+
+      @if (linkedinUrl) {
+        <a
+          class="button button--secondary"
+          [href]="linkedinUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">work</span>
+          {{ 'home.linkedin' | transloco }}
+        </a>
+      } @else {
+        <span class="button button--secondary button--disabled">
+          <span class="material-symbols-outlined" aria-hidden="true">work</span>
+          {{ 'home.linkedin' | transloco }}
+        </span>
+      }
+    </div>
+  </div>
+
+  <div class="hero__visual" aria-hidden="true">
+    <div class="hero__orb">
+      <span class="material-symbols-outlined">terminal</span>
+      <span class="hero__orb-code">&lt;/&gt;</span>
+    </div>
+  </div>
+</section>

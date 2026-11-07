@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+.skills-globe {
+  width: min(100%, 52rem);
+  height: 42rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.skills-globe__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none;
+}
+
+.skills-globe__canvas:active {
+  cursor: grabbing;
+}

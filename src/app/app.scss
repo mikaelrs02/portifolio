@@ -1,0 +1,16 @@
+main {
+  min-height: calc(100vh - 4.5rem);
+}
+
+main > section {
+  scroll-margin-top: 4.5rem;
+}
+
+.coming-soon-section {
+  display: grid;
+  min-height: 60vh;
+  place-items: center;
+  padding: 4rem 1.25rem;
+  color: var(--color-text-secondary);
+  font-size: 2rem;
+}

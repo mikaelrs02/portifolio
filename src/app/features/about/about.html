@@ -1,0 +1,73 @@
+<section class="about-page" aria-labelledby="about-title">
+  <div class="about-page__intro">
+    <p class="about-page__eyebrow">{{ 'about.eyebrow' | transloco }}</p>
+    <p class="about-page__description">{{ 'about.description' | transloco }}</p>
+  </div>
+
+  <section class="about-page__skills" aria-labelledby="skills-title">
+    <h2 id="skills-title">{{ 'about.skills.title' | transloco }}</h2>
+    <app-skills-globe />
+
+    @for (group of skillGroups; track group.key) {
+      <div class="about-page__skill-group">
+        <h3>{{ ('about.skills.groups.' + group.key) | transloco }}</h3>
+        <div class="about-page__skill-grid">
+          @for (skill of group.skills; track skill[0]) {
+            <article class="about-page__skill-card">
+              <img [src]="'/skills/' + skill[0]" [alt]="skill[1]" />
+              <span>{{ skill[1] }}</span>
+            </article>
+          }
+        </div>
+      </div>
+    }
+  </section>
+
+  <section class="about-page__timeline" aria-labelledby="timeline-title">
+    <h2 id="timeline-title">{{ 'about.timeline.title' | transloco }}</h2>
+
+    <article class="about-page__timeline-card">
+      <div class="about-page__timeline-heading">
+        <span class="material-symbols-outlined" aria-hidden="true">school</span>
+        <h3>{{ 'about.education.title' | transloco }}</h3>
+      </div>
+      <div class="about-page__timeline-entry">
+        <span class="about-page__timeline-dot" aria-hidden="true"></span>
+        <div>
+          <h4>{{ 'about.education.title' | transloco }}</h4>
+          <p class="about-page__timeline-period">{{ 'about.education.period' | transloco }}</p>
+          <p>{{ 'about.education.description' | transloco }}</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="about-page__timeline-card">
+      <div class="about-page__timeline-heading">
+        <span class="material-symbols-outlined" aria-hidden="true">work</span>
+        <h3>{{ 'about.experience.title' | transloco }}</h3>
+      </div>
+
+      <div class="about-page__timeline-list">
+        @for (experience of experienceItems; track experience.key) {
+          <div class="about-page__timeline-entry">
+            <span class="about-page__timeline-dot" aria-hidden="true"></span>
+            <div>
+              <h4>{{ experience.roleKey | transloco }}</h4>
+              <p class="about-page__timeline-company">
+                {{ experience.companyKey | transloco }}
+              </p>
+              <p class="about-page__timeline-period">
+                {{ experience.periodKey | transloco }}
+              </p>
+              <ul>
+                @for (bullet of experience.bullets; track bullet) {
+                  <li>{{ bullet | transloco }}</li>
+                }
+              </ul>
+            </div>
+          </div>
+        }
+      </div>
+    </article>
+  </section>
+</section>

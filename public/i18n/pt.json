@@ -1,0 +1,206 @@
+{
+  "brand": {
+    "name": "Mikael Ribeiro",
+    "role": "Desenvolvedor Full Stack"
+  },
+  "about": {
+    "eyebrow": "Sobre mim",
+    "skillsPlaceholder": "Globo de tecnologias em preparação.",
+    "description": "Sou Mikael Ribeiro Silvestre de Azevedo, Desenvolvedor de Software com experiência na construção e evolução de aplicações back-end, front-end e interfaces UI/UX. Trabalho com Java, Spring Boot, APIs REST, Angular, TypeScript, PHP, React.js e bancos de dados relacionais, participando de diferentes etapas do desenvolvimento: entendimento da necessidade, implementação, integração, correção e manutenção. Tenho interesse em transformar problemas de negócio em soluções claras, funcionais e bem estruturadas, sempre buscando aplicar boas práticas, escrever código sustentável e evoluir tecnicamente. Atualmente curso Ciência da Computação e busco crescer como Desenvolvedor Full Stack, com foco em Java e Angular.",
+    "education": {
+      "title": "Ciência da Computação",
+      "description": "Graduação em andamento, com foco no desenvolvimento de software e na construção de uma base sólida em tecnologia.",
+      "period": "Graduação em andamento"
+    },
+    "timeline": {
+      "title": "Formação e experiência"
+    },
+    "experience": {
+      "title": "Experiência profissional",
+      "items": {
+        "anbima": {
+          "role": "Estagiário de Desenvolvimento",
+          "company": "ANBIMA",
+          "period": "Setembro de 2025 – Atual",
+          "bullets": {
+            "one": "Atuação no desenvolvimento e na manutenção de soluções back-end com Java e Spring Boot, incluindo a criação e evolução de APIs REST.",
+            "two": "Atuação full-stack, desenvolvendo funcionalidades back-end com Java e experiências front-end com Angular e TypeScript.",
+            "three": "Desenvolvimento e manutenção de aplicações corporativas executadas em ambientes JBoss/WildFly.",
+            "four": "Integração de sistemas e serviços por meio de APIs e bancos de dados relacionais, conectando diferentes necessidades da aplicação.",
+            "five": "Investigação e correção de bugs, refatoração de código e evolução gradual de sistemas legados.",
+            "six": "Aplicação de boas práticas de desenvolvimento, versionamento com Git, participação em code reviews e processos ágeis."
+          }
+        },
+        "ffa": {
+          "role": "Desenvolvedor Júnior",
+          "company": "FFA Infraestrutura e Serviços LTDA",
+          "period": "Junho de 2024 – Setembro de 2025",
+          "bullets": {
+            "one": "Desenvolvimento de funcionalidades web com PHP 8+, Node.js, Angular, JavaScript, HTML, CSS e React.js.",
+            "two": "Utilização de Bootstrap, Laravel e Lumen para estruturar interfaces e soluções web.",
+            "three": "Desenvolvimento e manutenção de soluções integradas ao banco de dados MySQL."
+          }
+        },
+        "newsSystems": {
+          "role": "Desenvolvedor Estagiário/Trainee",
+          "company": "News Systems Análise e Projetos",
+          "period": "Abril de 2023 – Junho de 2024",
+          "bullets": {
+            "one": "Desenvolvimento e manutenção de funcionalidades com PHP 5+, JavaScript, HTML e CSS.",
+            "two": "Utilização de CodeIgniter e Bootstrap na construção e manutenção das aplicações.",
+            "three": "Desenvolvimento e manutenção de soluções com integração aos bancos MySQL e Oracle.",
+            "four": "Atualização e controle das versões dos sistemas utilizando Git."
+          }
+        }
+      }
+    },
+    "skills": {
+      "title": "Tecnologias e ferramentas",
+      "groups": {
+        "backend": "Back-end",
+        "frontend": "Front-end",
+        "databases": "Bancos de dados",
+        "devops": "DevOps e infraestrutura",
+        "tools": "Ferramentas e testes"
+      }
+    },
+    "highlights": {
+      "backend": {
+        "title": "Back-end",
+        "description": "Java, Spring Boot, PHP e desenvolvimento de APIs REST."
+      },
+      "frontend": {
+        "title": "Front-end",
+        "description": "Angular, TypeScript, React.js, JavaScript, HTML e CSS."
+      },
+      "database": {
+        "title": "Dados e integração",
+        "description": "Integração com MySQL, Oracle e PostgreSQL em aplicações corporativas."
+      },
+      "practices": {
+        "title": "Boas práticas",
+        "description": "Git, code review, testes com JUnit e Mockito e metodologias ágeis."
+      }
+    }
+  },
+  "home": {
+    "eyebrow": "Olá, eu sou Mikael",
+    "titleFirstLine": "Desenvolvedor",
+    "titleSecondLine": "Full Stack",
+    "role": "Java • Spring Boot • Angular",
+    "description": "Desenvolvedor de Software com experiência em aplicações back-end e front-end, APIs REST, integração com bancos de dados e aplicações corporativas.",
+    "downloadResume": "Baixar currículo",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "portfolio": {
+    "eyebrow": "Meu trabalho",
+    "title": "Portfólio",
+    "description": "Conheça alguns projetos e certificados que representam minha evolução como desenvolvedor.",
+    "tabs": {
+      "projects": "Projetos",
+      "certificates": "Certificados"
+    },
+    "completedOn": "Concluído em",
+    "viewCertificate": "Ver certificado",
+    "documentPreview": "Certificado em PDF",
+    "previous": "Item anterior",
+    "next": "Próximo item",
+    "indicators": "Navegação dos itens",
+    "status": {
+      "maintenance": "Em manutenção"
+    },
+    "projects": {
+      "maintenance": {
+        "title": "Projetos em manutenção",
+        "description": "Os projetos estão passando por melhorias. Em breve, novos detalhes estarão disponíveis."
+      },
+      "items": {
+        "first": {
+          "title": "Projeto em destaque",
+          "description": "Uma aplicação desenvolvida com foco em organização, usabilidade e boas práticas."
+        },
+        "second": {
+          "title": "Aplicação web",
+          "description": "Projeto front-end responsivo com integração de componentes e serviços."
+        },
+        "third": {
+          "title": "Sistema corporativo",
+          "description": "Solução para trabalhar com dados, regras de negócio e integração com APIs."
+        }
+      }
+    },
+    "certificates": {
+      "items": {
+        "java": {
+          "title": "Formação em Java",
+          "description": "Fundamentos e orientação a objetos, além de Spring Boot, APIs REST, JPA, autenticação, testes, padrões de projeto e DDD.",
+          "date": "24 de março de 2026"
+        },
+        "database": {
+          "title": "Banco de dados",
+          "description": "SQL, modelagem entidade-relacionamento, normalização, consultas avançadas, índices, segurança, backup e recursos do PostgreSQL.",
+          "date": "28 de abril de 2026"
+        },
+        "angular": {
+          "title": "Angular",
+          "description": "Angular, organização de projetos, componentes, controle de fluxo, serviços, RxJS, formulários, roteamento, Signals e testes.",
+          "date": "6 de outubro de 2026"
+        },
+        "git": {
+          "title": "Git e GitHub do básico ao avançado",
+          "description": "Curso sobre controle de versão com Git, colaboração no GitHub, Gist e publicação de projetos com GitHub Pages.",
+          "date": "21 de setembro de 2024"
+        },
+        "frontend": {
+          "title": "Curso de Front-end",
+          "description": "Formação Vai na Web com HTML, CSS, JavaScript, React, React Hooks, GraphQL, GitFlow e design responsivo.",
+          "date": "30 de maio de 2023"
+        },
+        "angularCourse": {
+          "title": "Angular 19 — Curso completo do iniciante ao avançado",
+          "description": "Curso prático de Angular 19, cobrindo a construção de aplicações desde os fundamentos até recursos avançados do framework.",
+          "date": "7 de fevereiro de 2026"
+        }
+      }
+    }
+  },
+  "navigation": {
+    "ariaLabel": "Navegação principal",
+    "home": "Início",
+    "about": "Sobre",
+    "portfolio": "Portfólio",
+    "contact": "Contato",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "changeLanguage": "Alterar idioma"
+  },
+  "contact": {
+    "eyebrow": "Entre em contato",
+    "title": "Vamos conversar",
+    "description": "Tem uma oportunidade ou quer trocar uma ideia? Entre em contato por um dos canais abaixo.",
+    "form": {
+      "title": "Envie uma mensagem",
+      "description": "Preencha os campos e, em breve, conectaremos este formulário a um serviço de envio.",
+      "maintenance": "O envio de mensagens está em manutenção no momento.",
+      "name": "Nome",
+      "namePlaceholder": "Seu nome",
+      "email": "E-mail",
+      "emailPlaceholder": "seu@email.com",
+      "subject": "Assunto",
+      "subjectPlaceholder": "Como posso ajudar?",
+      "message": "Mensagem",
+      "messagePlaceholder": "Escreva sua mensagem",
+      "submit": "Enviar mensagem"
+    },
+    "channels": {
+      "title": "Canais de contato",
+      "description": "Fique à vontade para entrar em contato pelas minhas redes profissionais.",
+      "linkedin": "Conecte-se comigo no LinkedIn",
+      "github": "Veja meus projetos no GitHub",
+      "email": "E-mail",
+      "phone": "Telefone"
+    },
+    "socials": "Conecte-se comigo"
+  }
+}

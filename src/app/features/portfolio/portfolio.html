@@ -1,0 +1,102 @@
+<section class="portfolio" aria-labelledby="portfolio-title">
+  <div class="portfolio__heading">
+    <p class="portfolio__eyebrow">{{ 'portfolio.eyebrow' | transloco }}</p>
+    <h2 id="portfolio-title">{{ 'portfolio.title' | transloco }}</h2>
+    <p>{{ 'portfolio.description' | transloco }}</p>
+  </div>
+
+  <div class="portfolio__tabs" role="tablist" [attr.aria-label]="'portfolio.title' | transloco">
+    <button
+      class="portfolio__tab"
+      type="button"
+      role="tab"
+      [attr.aria-selected]="activeCategory() === 'projects'"
+      [class.portfolio__tab--active]="activeCategory() === 'projects'"
+      (click)="selectCategory('projects')"
+    >
+      <span class="material-symbols-outlined" aria-hidden="true">code</span>
+      {{ 'portfolio.tabs.projects' | transloco }}
+    </button>
+    <button
+      class="portfolio__tab"
+      type="button"
+      role="tab"
+      [attr.aria-selected]="activeCategory() === 'certificates'"
+      [class.portfolio__tab--active]="activeCategory() === 'certificates'"
+      (click)="selectCategory('certificates')"
+    >
+      <span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>
+      {{ 'portfolio.tabs.certificates' | transloco }}
+    </button>
+  </div>
+
+  <div class="portfolio__carousel" aria-live="polite">
+    <button
+      class="portfolio__arrow"
+      type="button"
+      [attr.aria-label]="'portfolio.previous' | transloco"
+      (click)="previousItem()"
+    >
+      <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+    </button>
+
+    <div class="portfolio__cards">
+      @for (item of visibleItems(); track $index) {
+        <article class="portfolio-card">
+          @if (!item.hidePreview) {
+            <div class="portfolio-card__preview">
+              @if (item.previewUrl) {
+                <img [src]="item.previewUrl" [alt]="item.titleKey | transloco" />
+              } @else {
+                <span class="material-symbols-outlined" aria-hidden="true">{{ item.icon }}</span>
+              }
+            </div>
+          }
+          @if (item.statusKey) {
+            <span class="portfolio-card__status">{{ item.statusKey | transloco }}</span>
+          }
+          <h3>{{ item.titleKey | transloco }}</h3>
+          <p>{{ item.descriptionKey | transloco }}</p>
+        @if (item.dateKey) {
+          <p class="portfolio-card__date">
+            <span class="material-symbols-outlined" aria-hidden="true">event</span>
+            {{ 'portfolio.completedOn' | transloco }}: {{ item.dateKey | transloco }}
+          </p>
+        }
+        @if (item.fileUrl) {
+          <a
+            class="portfolio-card__link"
+            [href]="item.fileUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ 'portfolio.viewCertificate' | transloco }}
+            <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+          </a>
+        }
+        </article>
+      }
+    </div>
+
+    <button
+      class="portfolio__arrow"
+      type="button"
+      [attr.aria-label]="'portfolio.next' | transloco"
+      (click)="nextItem()"
+    >
+      <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+    </button>
+  </div>
+
+  <div class="portfolio__indicators" [attr.aria-label]="'portfolio.indicators' | transloco">
+    @for (item of activeItems(); track item.titleKey; let index = $index) {
+      <button
+        type="button"
+        [class.portfolio__indicator--active]="index === activeIndex()"
+        [attr.aria-label]="item.titleKey | transloco"
+        [attr.aria-current]="index === activeIndex() ? 'true' : null"
+        (click)="selectItem(index)"
+      ></button>
+    }
+  </div>
+</section>

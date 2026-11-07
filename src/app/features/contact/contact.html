@@ -1,0 +1,91 @@
+<section class="contact" aria-labelledby="contact-title">
+  <div class="contact__heading">
+    <p class="contact__eyebrow">{{ 'contact.eyebrow' | transloco }}</p>
+    <h2 id="contact-title">{{ 'contact.title' | transloco }}</h2>
+    <p>{{ 'contact.description' | transloco }}</p>
+  </div>
+
+  <div class="contact__layout">
+    <div class="contact__form-card">
+      <h3>{{ 'contact.form.title' | transloco }}</h3>
+      <p>{{ 'contact.form.description' | transloco }}</p>
+      <p class="contact__maintenance">
+        <span class="material-symbols-outlined" aria-hidden="true">build</span>
+        {{ 'contact.form.maintenance' | transloco }}
+      </p>
+
+      <form>
+        <div class="contact__form-row">
+          <label>
+            <span>{{ 'contact.form.name' | transloco }}</span>
+            <input type="text" name="name" [placeholder]="'contact.form.namePlaceholder' | transloco" />
+          </label>
+          <label>
+            <span>{{ 'contact.form.email' | transloco }}</span>
+            <input type="email" name="email" [placeholder]="'contact.form.emailPlaceholder' | transloco" />
+          </label>
+        </div>
+
+        <label>
+          <span>{{ 'contact.form.subject' | transloco }}</span>
+          <input type="text" name="subject" [placeholder]="'contact.form.subjectPlaceholder' | transloco" />
+        </label>
+
+        <label>
+          <span>{{ 'contact.form.message' | transloco }}</span>
+          <textarea name="message" rows="5" [placeholder]="'contact.form.messagePlaceholder' | transloco"></textarea>
+        </label>
+
+        <button class="contact__submit" type="button" disabled>
+          <span class="material-symbols-outlined" aria-hidden="true">send</span>
+          {{ 'contact.form.submit' | transloco }}
+        </button>
+      </form>
+    </div>
+
+    <div class="contact__details">
+      <article class="contact__info-card">
+        <span class="material-symbols-outlined" aria-hidden="true">forum</span>
+        <div>
+          <h3>{{ 'contact.channels.title' | transloco }}</h3>
+          <p>{{ 'contact.channels.description' | transloco }}</p>
+        </div>
+      </article>
+
+      <a class="contact__info-card contact__info-card--link" [href]="linkedinUrl" target="_blank" rel="noopener noreferrer">
+        <img class="contact__brand-icon" src="/icons/linkedin.svg" alt="" aria-hidden="true" />
+        <div>
+          <h3>LinkedIn</h3>
+          <p>{{ 'contact.channels.linkedin' | transloco }}</p>
+        </div>
+        <span class="material-symbols-outlined contact__external" aria-hidden="true">open_in_new</span>
+      </a>
+
+      <a class="contact__info-card contact__info-card--link" [href]="githubUrl" target="_blank" rel="noopener noreferrer">
+        <img class="contact__brand-icon" src="/icons/github.svg" alt="" aria-hidden="true" />
+        <div>
+          <h3>GitHub</h3>
+          <p>{{ 'contact.channels.github' | transloco }}</p>
+        </div>
+        <span class="material-symbols-outlined contact__external" aria-hidden="true">open_in_new</span>
+      </a>
+
+      <a class="contact__info-card contact__info-card--link" [href]="emailUrl">
+        <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+        <div>
+          <h3>{{ 'contact.channels.email' | transloco }}</h3>
+          <p>{{ email }}</p>
+        </div>
+      </a>
+
+      <a class="contact__info-card contact__info-card--link" [href]="phoneUrl">
+        <span class="material-symbols-outlined" aria-hidden="true">phone</span>
+        <div>
+          <h3>{{ 'contact.channels.phone' | transloco }}</h3>
+          <p>{{ phone }}</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>

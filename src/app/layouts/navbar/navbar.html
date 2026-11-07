@@ -1,0 +1,89 @@
+<header class="site-header">
+  <nav class="navbar" [attr.aria-label]="'navigation.ariaLabel' | transloco">
+    <a class="brand" href="#home" (click)="navigateTo('home')">
+      <span class="brand__name">{{ 'brand.name' | transloco }}</span>
+      <span class="brand__role">{{ 'brand.role' | transloco }}</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      [attr.aria-label]="
+        (isMenuOpen() ? 'navigation.closeMenu' : 'navigation.openMenu')
+          | transloco
+      "
+      [attr.aria-expanded]="isMenuOpen()"
+      (click)="toggleMenu()"
+    >
+      <span class="material-symbols-outlined" aria-hidden="true">
+        {{ isMenuOpen() ? 'close' : 'menu' }}
+      </span>
+    </button>
+
+    <div
+      class="navbar__content"
+      [class.navbar__content--open]="isMenuOpen()"
+    >
+      <ul class="navbar__links">
+        <li>
+          <a
+            href="#home"
+            [class.navbar__link--active]="activeSection() === 'home'"
+            (click)="navigateTo('home')"
+          >
+            {{ 'navigation.home' | transloco }}
+          </a>
+        </li>
+        <li>
+          <a
+            href="#about"
+            [class.navbar__link--active]="activeSection() === 'about'"
+            (click)="navigateTo('about')"
+          >
+            {{ 'navigation.about' | transloco }}
+          </a>
+        </li>
+        <li>
+          <a
+            href="#portfolio"
+            [class.navbar__link--active]="activeSection() === 'portfolio'"
+            (click)="navigateTo('portfolio')"
+          >
+            {{ 'navigation.portfolio' | transloco }}
+          </a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            [class.navbar__link--active]="activeSection() === 'contact'"
+            (click)="navigateTo('contact')"
+          >
+            {{ 'navigation.contact' | transloco }}
+          </a>
+        </li>
+      </ul>
+
+      <button
+        class="language-button"
+        type="button"
+        [attr.aria-label]="'navigation.changeLanguage' | transloco"
+        (click)="changeLanguage()"
+      >
+        <img
+          class="language-button__flag"
+          [class.language-button__flag--active]="languageService.language() === 'pt'"
+          src="/flags/br.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="language-button__flag"
+          [class.language-button__flag--active]="languageService.language() === 'en'"
+          src="/flags/us.svg"
+          alt=""
+          aria-hidden="true"
+        />
+      </button>
+    </div>
+  </nav>
+</header>
