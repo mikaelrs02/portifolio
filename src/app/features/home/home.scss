@@ -81,6 +81,12 @@ h1 span {
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
+.button__brand-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 1.15rem;
+}
+
 .button:not(.button--disabled):hover {
   transform: translateY(-0.15rem);
 }
