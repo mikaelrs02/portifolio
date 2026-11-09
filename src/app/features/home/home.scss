@@ -133,6 +133,14 @@ h1 span {
   color: var(--color-accent);
 }
 
+.hero__photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .hero__orb::before,
 .hero__orb::after {
   position: absolute;
@@ -148,19 +156,6 @@ h1 span {
 .hero__orb::after {
   inset: -0.8rem;
   border-color: rgb(56 189 248 / 25%);
-}
-
-.hero__orb > .material-symbols-outlined {
-  font-size: 5rem;
-}
-
-.hero__orb-code {
-  position: absolute;
-  right: 20%;
-  bottom: 23%;
-  color: var(--color-accent-secondary);
-  font-size: 1.5rem;
-  font-weight: 800;
 }
 
 @media (min-width: 48rem) {
