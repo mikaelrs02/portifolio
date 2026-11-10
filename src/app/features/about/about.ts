@@ -1,10 +1,13 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TranslocoPipe } from '@jsverse/transloco';
-import { SkillsGlobe } from '../../shared/components/skills-globe/skills-globe';
+// import { SkillsGlobe } from '../../shared/components/skills-globe/skills-globe';
 
 @Component({
   selector: 'app-about',
-  imports: [TranslocoPipe, SkillsGlobe],
+  imports: [
+    TranslocoPipe,
+    // SkillsGlobe,
+  ],
   templateUrl: './about.html',
   styleUrl: './about.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
