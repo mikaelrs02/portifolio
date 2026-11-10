@@ -4,7 +4,7 @@
 
 .skills-globe {
   width: min(100%, 52rem);
-  height: 42rem;
+  height: clamp(20rem, 75vw, 42rem);
   margin: 0 auto;
   overflow: hidden;
 }

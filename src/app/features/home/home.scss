@@ -66,6 +66,16 @@ h1 span {
   margin-top: 2rem;
 }
 
+@media (max-width: 30rem) {
+  .hero__actions {
+    display: grid;
+  }
+
+  .hero__actions .button {
+    width: 100%;
+  }
+}
+
 .button {
   display: inline-flex;
   align-items: center;
